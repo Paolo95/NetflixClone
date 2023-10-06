@@ -10,12 +10,26 @@ export class HomeComponent implements OnInit{
 
   constructor(private service:MovieApiServiceService){ }
 
-  bannerResult:any = [];
-  trendingMovieResult:any = [];
+  bannerResult: any = [];
+  trendingMovieResult: any = [];
+  actionMovieResult: any = [];
+  adventureMovieResult: any = [];
+  animationMovieResult: any = [];
+  comedyMovieResult: any = [];
+  documentaryMovieResult: any = [];
+  sciencefictionMovieResult: any = [];
+  thrillerMovieResult: any = [];
 
   ngOnInit(): void {
     this.bannerData();
     this.trendingData();
+    this.actionMovie();
+    this.animationMovie();
+    this.comedyMovie();
+    this.animationMovie();
+    this.documentaryMovie();
+    this.sciencefictionMovie();
+    this.thrillerMovie();
   }
 
   bannerData(){
@@ -30,6 +44,62 @@ export class HomeComponent implements OnInit{
     this.service.trendingMoviesApiData().subscribe((result) => {
       console.log(result,'trendingresult');
       this.trendingMovieResult = result.results;
+    })
+  }
+
+  actionMovie()
+  {
+    this.service.fetchActionMovies().subscribe((result) => {
+      console.log(result, 'actionmovies#');
+      this.actionMovieResult = result.results;
+    })
+  }
+
+  adventureMovie()
+  {
+    this.service.fetchAdventureMovies().subscribe((result) => {
+      console.log(result, 'adventuremovie#');
+      this.adventureMovieResult = result.results;
+    })
+  }
+
+  animationMovie()
+  {
+    this.service.fetchAnimationMovies().subscribe((result) => {
+      console.log(result, 'animationmovie#');
+      this.animationMovieResult = result.results;
+    })
+  }
+
+  comedyMovie()
+  {
+    this.service.fetchComedyMovies().subscribe((result) => {
+      console.log(result, 'comedymovie#');
+      this.comedyMovieResult = result.results;
+    })
+  }
+
+  documentaryMovie()
+  {
+    this.service.fetchDocumentaryMovies().subscribe((result) => {
+      console.log(result, 'documentarymovie#');
+      this.documentaryMovieResult = result.results;
+    })
+  }
+
+  sciencefictionMovie()
+  {
+    this.service.fetchScienceFictionMovies().subscribe((result) => {
+      console.log(result, 'sciencefictionmovie#');
+      this.sciencefictionMovieResult = result.results;
+    })
+  }
+
+  thrillerMovie()
+  {
+    this.service.fetchThrillerMovies().subscribe((result) => {
+      console.log(result, 'thrillermovie#');
+      this.thrillerMovieResult = result.results;
     })
   }
 }
