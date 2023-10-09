@@ -4,10 +4,10 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './user-home.component.html',
+  styleUrls: ['./user-home.component.css']
 })
-export class HomeComponent implements OnInit{
+export class UserHomeComponent implements OnInit{
 
   constructor(private service:MovieApiServiceService, public auth: AuthService){ }
 

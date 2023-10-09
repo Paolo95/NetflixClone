@@ -10,19 +10,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieApiServiceService } from './service/movie-api-service.service';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserHomeComponent } from './pages/user-home/user-home.component';
+
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from 'src/environment/envionment';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule.forRoot(environment.auth),
   ],
   providers: [MovieApiServiceService],
   bootstrap: [AppComponent]

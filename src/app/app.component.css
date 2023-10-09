@@ -1,10 +1,73 @@
+.navbar
+{
+    padding: 20px 11rem 0 11rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 .navbar .navbar-brand
 {
-    color: #E50914;
+    color:aliceblue;
     font-weight: bold;
 }
 
 .navbar-nav .nav-item .nav-link
 {
-    color: #E50914;
+    color: aliceblue;
+}
+
+.navbar .d-flex
+{
+    display: flex;
+    gap: 20px;
+    height: 50px;
+    align-items: center;
+}
+
+.navbar-collapse .d-flex .btn
+{
+    background-color: #E50914;
+    color: aliceblue;
+    border-color: #E50914;
+    height: auto;
+    width: 78px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-collapse .d-flex .btn:hover
+{
+    background-color: #b20911;
+    border-color: #b20911;
+}
+
+.navbar-collapse .d-flex .bi
+{
+    padding-right: 10px;
+}
+
+.navbar .dropdown-div
+{
+    border: 1px solid;
+    border-color: grey;
+    border-radius: 5px;
+    width: 130px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1px;
+}
+
+.navbar .d-flex .navbar-nav
+{
+    border: 2px solid;
+    border-color: aliceblue;
+    border-radius: 5px;
 }
